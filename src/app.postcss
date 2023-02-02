@@ -1,0 +1,33 @@
+@import url('https://rsms.me/inter/inter.css');
+
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+	html {
+		font-family: 'Inter var', sans-serif;
+	}
+}
+
+body {
+	@apply mt-10 mx-8 mb-10 text-white h-full;
+	background: linear-gradient(
+		45deg,
+		rgba(28, 85, 255, 1) 0%,
+		rgba(127, 53, 171, 1) 59%,
+		rgba(255, 11, 214, 1) 100%
+	);
+}
+
+a {
+	@apply transition-all duration-300 ease-in-out hover:text-gray-900;
+}
+
+a > svg {
+	@apply transition-all duration-300 ease-in-out hover:fill-gray-900;
+}
